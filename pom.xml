@@ -120,11 +120,11 @@
 	<distributionManagement>
 	<repository>
 		<id>maven-releases</id>
-		<url>http://13.235.33.220:8081/repository/maven-releases/</url>
+		<url>http://13.235.33.220:8081/repository/maven-releases/</url> // IP need to be changed here
 	</repository>
 	<snapshotRepository>
 		<id>maven-snaphots</id>
-		<url>http://13.235.33.220:8081/repository/maven-snapshots/</url>
+		<url>http://13.235.33.220:8081/repository/maven-snapshots/</url> // IP need to be changed here
 	</snapshotRepository>
 	</distributionManagement>
 
