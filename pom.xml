@@ -116,6 +116,16 @@
 		</plugins>
 	</build>
 
-	
+	// for Maven Distribution Artifactory
+	<distributionManagement>
+	<repository>
+		<id>maven-releases</id>
+		<url>http://13.235.33.220:8081/repository/maven-releases/</url>
+	</repository>
+	<snapshotRepository>
+		<id>maven-snaphots</id>
+		<url>http://13.235.33.220:8081/repository/maven-snapshots/</url>
+	</snapshotRepository>
+	</distributionManagement>
 
 </project>
