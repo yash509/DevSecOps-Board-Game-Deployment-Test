@@ -74,7 +74,7 @@ pipeline {
             steps {
                script {
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                            sh "docker build -t adijaiswal/boardshack:latest ."
+                            sh "docker build -t yash5090/boardgame:latest ."
                     }
                }
             }
@@ -82,7 +82,7 @@ pipeline {
         
         stage('Docker Image Scan') {
             steps {
-                sh "trivy image --format table -o trivy-image-report.html adijaiswal/boardshack:latest "
+                sh "trivy image --format table -o trivy-image-report.html yash5090/boardgame:latest "
             }
         }
         
@@ -90,7 +90,7 @@ pipeline {
             steps {
                script {
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                            sh "docker push adijaiswal/boardshack:latest"
+                            sh "docker push yash5090/boardgame:latest"
                     }
                }
             }
@@ -139,7 +139,7 @@ pipeline {
             emailext (
                 subject: "${jobName} - Build ${buildNumber} - ${pipelineStatus.toUpperCase()}",
                 body: body,
-                to: 'jaiswaladi246@gmail.com',
+                to: 'clouddevopshunter@gmail.com',
                 from: 'jenkins@example.com',
                 replyTo: 'jenkins@example.com',
                 mimeType: 'text/html',
