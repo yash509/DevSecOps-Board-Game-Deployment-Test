@@ -116,7 +116,7 @@
 		</plugins>
 	</build>
 
-	// for Maven Distribution Artifactory
+
 	<distributionManagement>
 	<repository>
 		<id>maven-releases</id>
